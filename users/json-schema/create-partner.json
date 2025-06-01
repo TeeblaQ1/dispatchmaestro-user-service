@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "properties": {
+      "entity_type": {
+        "type": "string",
+        "maxLength": 36
+      },
+      "first_name": {
+        "type": "string",
+        "maxLength": 36
+      },
+      "last_name": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "business_name": {
+        "type": "string",
+        "maxLength": 255
+      },
+      "logo": {
+        "type": "string",
+        "maxLength": 1024
+      },
+      "business_email_address": {
+        "type": "string",
+        "format": "email"
+      },
+      "contact_email_address": {
+        "type": "string",
+        "format": "email"
+      },
+      "phone_number": {
+        "type": "string",
+        "maxLength": 20
+      },
+      "description": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string",
+        "maxLength": 255
+      },
+      "latitude": {
+        "type": "number",
+        "minimum": -90,
+        "maximum": 90
+      },
+      "longitude": {
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      },
+      "country": {
+        "type": "string",
+        "maxLength": 255
+      },
+      "password": {
+        "type": "string",
+        "minLength": 6
+      },
+      "confirm_password": {
+        "type": "string",
+        "minLength": 6
+      },
+      "policy_consent": {
+        "type": "boolean",
+        "default": false
+      },
+      "whatsapp_consent": {
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "additionalProperties": false,
+    "required": ["entity_type", "first_name", "last_name", "business_name", "business_email_address", "contact_email_address", "phone_number", "address", "country", "password", "confirm_password", "policy_consent", "whatsapp_consent"]
+}

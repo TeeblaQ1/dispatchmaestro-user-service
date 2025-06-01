@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "type": "string",
+        "maxLength": 36
+      },
+      "last_name": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "logo": {
+        "type": "string",
+        "maxLength": 1024
+      },
+      "business_email_address": {
+        "type": "string",
+        "format": "email"
+      },
+      "contact_email_address": {
+        "type": "string",
+        "format": "email"
+      },
+      "phone_number": {
+        "type": "string",
+        "maxLength": 20
+      },
+      "description": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string",
+        "maxLength": 255
+      },
+      "country": {
+        "type": "string",
+        "maxLength": 255
+      }
+    },
+    "additionalProperties": false,
+    "anyOf": [
+      {"required": ["first_name"]},
+      {"required": ["last_name"]},
+      {"required": ["logo"]},
+      {"required": ["business_email_address"]},
+      {"required": ["contact_email_address"]},
+      {"required": ["phone_number"]},
+      {"required": ["description"]},
+      {"required": ["role"]},
+      {"required": ["address"]},
+      {"required": ["country"]}
+  ]
+}

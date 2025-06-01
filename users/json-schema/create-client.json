@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "entity_type": {
+            "type": "string",
+            "enum": ["client", "partner"]
+        },
+        "first_name": {
+            "type": "string",
+            "maxLength": 255
+        },
+        "last_name": {
+            "type": "string",
+            "maxLength": 255
+        },
+        "business_name": {
+            "type": "string",
+            "maxLength": 255
+        },
+        "logo": {
+            "type": "string",
+            "maxLength": 1024
+        },
+        "email_address": {
+            "type": "string",
+            "format": "email"
+        },
+        "phone_number": {
+            "type": "string",
+            "maxLength": 20
+        },
+        "description": {
+            "type": "string"
+        },
+        "website_url": {
+            "type": "string"
+        },
+        "role": {
+            "type": "string"
+        },
+        "country": {
+            "type": "string",
+            "maxLength": 255
+        },
+        "password": {
+            "type": "string",
+            "minLength": 6
+        },
+        "confirm_password": {
+            "type": "string",
+            "minLength": 6
+        }
+    },
+    "additionalProperties": false,
+    "required": ["entity_type", "first_name", "last_name", "business_name", "email_address", "phone_number", "country", "password", "confirm_password"]
+}

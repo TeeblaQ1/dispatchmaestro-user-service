@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "type": "string",
+        "maxLength": 36
+      },
+      "last_name": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "website_url": {
+        "type": "string"
+      },
+      "phone_number": {
+        "type": "string",
+        "maxLength": 20
+      },
+      "logo": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "country": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false,
+    "anyOf": [
+      {"required": ["first_name"]},
+      {"required": ["last_name"]},
+      {"required": ["website_url"]},
+      {"required": ["phone_number"]},
+      {"required": ["role"]},
+      {"required": ["logo"]},
+      {"required": ["country"]}
+  ]
+}

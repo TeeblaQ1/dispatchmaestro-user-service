@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "email_address": {
+            "type": "string",
+            "maxLength": 255
+        }
+    },
+    "additionalProperties": false,
+    "required": ["email_address"]
+}
